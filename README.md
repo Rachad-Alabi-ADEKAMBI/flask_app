@@ -1,1 +1,1 @@
-# flask_app is a web app for pets adoption
+# inf3190-tp3-20232

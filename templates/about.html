@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} A propos - La compagnie des animaux {% endblock %}
+
+
+<div class="content">
+    {% include 'header.html' %}
+
+    {% block body %}
+
+    <main class="main">
+        <section class="section">
+            <div class="about">
+                <div class="about__text">
+                    <h2>
+                        QUI SOMMES NOUS ?
+                    </h2>
+
+                    <hr class="line">
+
+                    <p>
+                        La Compagnie des Animaux est une application web dédiée à offrir une opportunité unique d'adoption pour les animaux de compagnie. Notre plateforme vise à rapprocher les animaux en quête d'un foyer aimant avec des personnes prêtes à leur offrir une vie meilleure. Grâce à notre service, l'adoption et la mise en adoption sont totalement gratuites pour les utilisateurs, car notre priorité est de faire le bonheur des animaux et de favoriser des rencontres authentiques et bienveillantes.
+                    </p>
+
+                </div>
+                <div class="about__img">
+                    <img src="{{ url_for('static', filename='image/default.jpeg')}}" alt="Sauvons les animaux">
+                </div>
+            </div>
+
+            <div class="about">
+                <div class="about__img">
+                    <img src="{{ url_for('static', filename='image/pug.jpg')}}" alt="Sauvons les animaux">
+                </div>
+                <div class="about__text">
+
+                   <p>
+                    Chez La Compagnie des Animaux, nous croyons en la puissance de l'amour et de la compassion envers les animaux. Notre équipe est composée d'amoureux des bêtes, animés par la volonté de faire une différence dans la vie des animaux abandonnés ou en quête d'un nouveau foyer. Nous facilitons le processus d'adoption en mettant en relation les propriétaires d'animaux en attente d'adoption avec des familles désireuses de partager leur amour et leur vie avec un compagnon fidèle.
+                   </p>
+
+                </div>
+
+            </div>
+
+            <div class="about">
+                <div class="about__text">
+                    <p>
+                        En rejoignant La Compagnie des Animaux, vous faites partie d'une communauté dévouée à la cause animale. Nous nous engageons à offrir un environnement sûr et bienveillant pour les animaux, en veillant à ce que chaque adoption soit un succès et qu'elle enrichisse la vie de tous les participants, humains comme animaux. Rejoignez-nous dans cette belle aventure où l'amour et la générosité se rencontrent pour créer des liens éternels entre les êtres vivants.
+                    </p>
+
+                </div>
+                <div class="about__img">
+                    <img src="{{ url_for('static', filename='image/longcou.jpg')}}" alt="Sauvons les animaux">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}
+</div>
+
+
+
+
+

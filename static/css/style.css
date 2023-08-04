@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+html, body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+h1, h2 {
+  color: #e8739a;
+  font-weight: bold;
+}
+
+p {
+  margin: auto;
+}
+
+span, strong {
+  color: #20000B;
+  font-weight: bolder;
+}
+
+.btn {
+  width: auto;
+  min-width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  background-color: #e8739a;
+  color: black;
+  border: 1px solid #e8739a;
+}
+
+.links {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.link {
+  width: auto;
+  min-width: 120px;
+  border-radius: 5px;
+  margin: 8px;
+  cursor: pointer;
+  height: 50px;
+  background-color: #e8739a;
+  color: white;
+  border: 1px solid #e8739a;
+  text-decoration: none;
+  padding: 5px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.link:hover {
+  color: #e8739a;
+  background-color: white;
+  border: 1px solid #e8739a;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: white;
+  border: 1px solid #e8739a;
+  color: #e8739a;
+}
+
+.line {
+  color: #e8739a;
+  width: 30%;
+  margin: auto;
+  font-weight: bold;
+}
+
+strong {
+  color: #e8739a;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .header {
+  width: 100%;
+  height: 80px;
+}
+.content .header .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  padding-top: 10px;
+}
+.content .header .navbar .logo {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+}
+.content .header .navbar .logo img {
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+}
+.content .header .navbar__item ul li {
+  display: inline;
+  list-style: none;
+  margin: 8px;
+}
+.content .header .navbar__item ul li a {
+  text-decoration: none;
+  color: black;
+}
+.content .header .navbar__item ul li a:hover {
+  color: #e8739a;
+}
+.content .header .navbar__icon {
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+.content .header .navbar__icon i {
+  margin: 8px auto;
+  font-size: 1.8em;
+}
+.content .header .navbar__icon:hover i {
+  color: #e8739a;
+}
+.content .main {
+  height: auto;
+  margin: 0 auto 30px auto;
+}
+.content .main .section .hero {
+  height: 70vh;
+  display: block;
+  background-image: linear-gradient(to bottom, rgba(99, 109, 63, 0.52), rgba(45, 35, 46, 0.73)), url("/public/img/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+  text-align: center;
+  color: white;
+}
+.content .main .section .hero__title {
+  font-weight: bold;
+  color: white;
+  font-size: 3em;
+}
+.content .main .section .hero__text {
+  margin: 50px auto;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.content .main .section .about {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  text-align: center;
+}
+.content .main .section .about__text {
+  display: block;
+  flex: 1;
+  width: 100%;
+  margin: auto;
+}
+.content .main .section .about__text h2 {
+  margin: 15px auto;
+  text-align: center;
+}
+.content .main .section .about__text p {
+  width: 80%;
+  margin: auto auto 15px auto;
+  text-align: justify;
+}
+.content .main .section .about__text .link {
+  margin: 20px auto;
+}
+.content .main .section .about__img {
+  flex: 1;
+}
+.content .main .section .about__img img {
+  width: 100%;
+}
+.content .main .section .reason {
+  text-align: center;
+  width: 90%;
+  margin: 30px auto;
+}
+.content .main .section .products {
+  text-align: center;
+  margin: 30px auto;
+}
+.content .main .section .products p {
+  width: 90%;
+  margin: 15px auto;
+}
+.content .main .section .products__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px auto;
+  width: 80%;
+}
+.content .main .section .products__list .item {
+  display: block;
+}
+.content .main .section .products__list .item img {
+  width: 150px;
+}
+.content .main .section .products .table-responsive {
+  width: 90%;
+  margin: 30px auto;
+}
+.content .main .section .products .table-responsive table {
+  border: 1px solid black;
+}
+.content .main .section .products .table-responsive table thead {
+  background-color: #e8739a;
+  color: black;
+}
+.content .main .section .products .table-responsive table tbody {
+  padding: 10px;
+}
+.content .main .section .products .table-responsive table tbody td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.content .main .section .advices {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+}
+.content .main .section .advices__list {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  margin: 15px auto;
+  width: 95%;
+  margin: auto;
+}
+.content .main .section .advices__list__img {
+  flex: 1;
+  padding-top: 40px;
+  text-align: center;
+}
+.content .main .section .advices__list__img img {
+  width: 90%;
+  height: 500px;
+  margin: 30px auto;
+}
+.content .main .section .advices__list__text {
+  flex: 1;
+  text-align: justify;
+}
+.content .main .section .customers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto;
+}
+.content .main .section .customers .customer {
+  display: block;
+}
+.content .main .section .customers .customer img {
+  width: 250px;
+  height: 250px;
+  height: auto;
+}
+.content .main .section .customers .customer p span {
+  color: #e8739a;
+}
+.content .main .section .offers {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.content .main .section .contact {
+  display: block;
+  text-align: center;
+}
+.content .main .section .contact p {
+  width: 90%;
+  text-align: justify;
+  margin: 20px auto;
+}
+.content .main .section .contact__form {
+  width: 80%;
+  margin: 30px auto;
+}
+.content .main .section .contact__form form {
+  border: 1px solid black;
+  padding: 5px;
+  width: 500px;
+  margin: auto;
+}
+.content .main .section .contact__form form .form-group {
+  margin: 10px auto;
+}
+.content .main .section .contact__form form .form-group input {
+  height: 30px;
+}
+.content .main .section .contact__form form .form-group textarea {
+  height: 150px;
+  width: 90%;
+}
+.content .footer {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  margin: 30px auto 0 auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  bottom: 0;
+  width: 100%;
+}
+.content .footer__item {
+  flex: 1;
+  display: block;
+}
+.content .footer__item img {
+  width: 100px;
+  height: 60px;
+}
+.content .footer__item h4 {
+  color: #e8739a;
+}
+.content .footer__item ul li {
+  list-style: none;
+}
+.content .footer__item ul li a {
+  color: white;
+  text-decoration: none;
+}
+.content .footer__item ul li a i {
+  color: white;
+  margin-right: 10px;
+}
+.content .footer__item ul li a:hover {
+  color: #e8739a;
+}
+.content .footer__item ul li a:hover i {
+  color: #e8739a;
+}
+
+/*responsive for 1024px*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .content .header {
+    margin: 0;
+  }
+  .content .header .navbar__item {
+    background-color: #20000B;
+    border-radius: 5px;
+    width: 70%;
+    z-index: 99999;
+    display: none;
+  }
+  .content .header .navbar__item ul li {
+    display: block;
+    margin: 15px auto;
+  }
+  .content .header .navbar__item ul li a {
+    color: white;
+  }
+  .content .header .navbar__icon {
+    display: block;
+  }
+  .content .main .section {
+    padding-top: 0px;
+  }
+  .content .main .section .hero {
+    margin: 0 auto;
+    height: 40vh;
+  }
+  .content .main .section .hero p {
+    margin: 30px auto;
+  }
+  .content .main .section .hero .link {
+    margin: 30px auto;
+  }
+  .content .main .section .about {
+    flex-direction: column;
+  }
+  .content .main .section .about__img {
+    margin: 20px auto;
+  }
+  .content .main .section .products {
+    width: 100%;
+  }
+  .content .main .section .products__list {
+    width: 95%;
+  }
+  .content .main .section .advices__list {
+    flex-direction: column;
+  }
+  .content .main .section .advices__list img {
+    width: 550px;
+    height: 450px;
+  }
+  .content .main .section .customers .customer img {
+    width: 180px;
+    height: 180px;
+  }
+  .content .footer {
+    bottom: 0;
+    margin: 40px auto 0 auto;
+  }
+}
+/*responsive for 350pxpx*/
+@media screen and (min-width: 350px) and (max-width: 767px) {
+  .content .header {
+    margin: 0;
+  }
+  .content .header .navbar__item {
+    background-color: #20000B;
+    border-radius: 5px;
+    width: 70%;
+    z-index: 99999;
+    display: none;
+  }
+  .content .header .navbar__item ul li {
+    display: block;
+    margin: 15px auto;
+  }
+  .content .header .navbar__item ul li a {
+    color: white;
+  }
+  .content .header .navbar__icon {
+    display: block;
+  }
+  .content .main .section {
+    padding-top: 0px;
+  }
+  .content .main .section .hero {
+    margin: 0 auto;
+    height: 40vh;
+  }
+  .content .main .section .hero h1 {
+    font-size: 1.9em;
+  }
+  .content .main .section .hero p {
+    margin: 30px auto;
+  }
+  .content .main .section .hero .link {
+    margin: 30px auto;
+  }
+  .content .main .section .about {
+    flex-direction: column;
+  }
+  .content .main .section .about p {
+    width: 90%;
+  }
+  .content .main .section .about__img {
+    margin: 20px auto;
+  }
+  .content .main .section .products {
+    width: 100%;
+  }
+  .content .main .section .products__list {
+    width: 95%;
+    flex-direction: column;
+  }
+  .content .main .section .advices__list {
+    flex-direction: column;
+  }
+  .content .main .section .advices__list__img {
+    text-align: center;
+  }
+  .content .main .section .advices__list__img img {
+    width: 330px;
+    height: 330px;
+  }
+  .content .main .section .advices__list__text {
+    width: 90%;
+    margin: auto;
+  }
+  .content .main .section .customers {
+    flex-direction: column;
+  }
+  .content .main .section .customers .customer {
+    margin: auto;
+    text-align: center;
+  }
+  .content .main .section .customers .customer img {
+    width: 180px;
+    height: 180px;
+  }
+  .content .main .section .contact__form {
+    width: 100%;
+  }
+  .content .main .section .contact__form form {
+    width: 300px;
+    margin: auto;
+  }
+  .content .footer {
+    bottom: 0;
+    margin: 40px auto 0 auto;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

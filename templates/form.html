@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} Faire adopter - La compagnie des animaux {% endblock %}
+
+
+<div class="content">
+    {% include 'header.html' %}
+
+    {% block body %}
+
+    <main class="main">
+        <section class="section">
+            <div class="products">
+                <h2>
+                   FORMULAIRE DE MISE EN ADOPTION
+                </h2>
+
+                <hr class="line">
+
+               <div class="row">
+                <div class="col-sm-12 col-md-8 card mx-auto">
+                    <form class="form pt-2" action="adoption" method="POST" >
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="name">Nom de l'animal: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="nom" placeholder=""
+                                        name='nom' required minlength="3" maxlength="20">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="espece">Espèce: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="espece" placeholder=""
+                                        name='espece' required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="race">Race: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="race" placeholder=""
+                                        name='race' required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="age">Age: </label> <span class="red">*</span>
+                                    <input type="number" class="form-control mt-2" id="age" placeholder=""
+                                        name='age' required  min="0" max="30">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="description">Description: <span class="red">*</span> </label>
+                                    <textarea class="form-control"  id="description" name="description"
+                                        rows="3 "></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="courriel">Adresse couriel: </label> <span class="red">*</span>
+                                    <input type="email" class="form-crontrol mt-2" id="inputAddress" placeholder=""
+                                        name='courriel' required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="adresse">Adresse civile: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="inputAddress"
+                                    placeholder=""
+                                        name='adresse' required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="race">Ville: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="inputAddress" placeholder=""
+                                        name='ville' required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="cp">Code postal: </label> <span class="red">*</span>
+                                    <input type="text" class="form-control mt-2" id="inputAddress"
+                                    placeholder=""
+                                        name='cp' required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p class="text">
+                                    <span class="red">*</span> Toutes les cases ont obligatoires
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col">
+                                <button type="submit" value="Submit" class="btn btn-success">
+                                        Soumettre
+                                </button>
+                             </div>
+                        </div>
+
+                      </form>
+                </div>
+               </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}
+</div>
+
+
+
+
+

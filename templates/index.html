@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} Accueil - La compagnie des animaux{% endblock %}
+
+
+<div class="content">
+    {% include 'header.html' %}
+
+    {% block body %}
+
+    <main class="main">
+        <section class="section">
+            <div class="hero">
+                <h1 class="hero__title">
+                   LA COMPAGNIE DES ANIMAUX
+                </h1>
+
+                <p class="hero__text">
+                   Sauvez des vies en adoptant des animaux  <br>
+                   dans tout le Québec
+                </p>
+
+                <a class="btn btn-primary" href="{{ url_for('animals')}}">
+                    J'adopte un animal
+                </a>
+            </div>
+
+            <div class="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                  <div class="item__number">
+                                    <h5 class="mt-2">1</h5>
+                                  </div>
+
+                                  <h6 class="card-subtitle mb-2 mt-2 text-muted">Vous sauvez une vie</h6>
+                                  <p class="item__text">En adoptant un animal vous offrez une seconde chance à un petit être vulnérable et vous faites une différence positive dans le monde.</p>
+                                 </div>
+                              </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                  <div class="item__number">
+                                    <h5 class="mt-2">2</h5>
+                                  </div>
+
+                                  <h6 class="card-subtitle mb-2 mt-2 text-muted">Vous allez recevoir et donner de l’amour</h6>
+                                  <p class="item__text">En adoptant un animal, on donne de l'amour en lui offrant un foyer aimant, et on reçoit de l'amour inconditionnel en retour.</p>
+                                 </div>
+                              </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                  <div class="item__number">
+                                    <h5 class="mt-2">3</h5>
+                                  </div>
+
+                                  <h6 class="card-subtitle mb-2 mt-2 text-muted">Luttez contre le commerce animal</h6>
+                                  <p class="item__text">En luttant contre le commerce des animaux vivants,
+                                     on préserve leur bien-être et on favorise des pratiques plus éthiques.</p>
+                                 </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="about">
+                <div class="about__text">
+                    <h2>
+                        QUI SOMMES NOUS ?
+                    </h2>
+
+                    <hr class="line">
+
+                    <p>
+                        La Compagnie des Animaux est une application web dédiée à offrir une opportunité unique
+                        d'adoption pour les animaux de compagnie. Notre plateforme vise à rapprocher les animaux
+                        en quête d'un foyer aimant avec des personnes prêtes à leur offrir une vie meilleure.
+                         Grâce à notre service, l'adoption et la mise en adoption sont totalement gratuites pour les
+                         utilisateurs, car notre priorité est de faire le bonheur des animaux et de favoriser des rencontres
+                         authentiques et bienveillantes ...
+                    </p>
+
+                    <a class="btn btn-primary" href="{{ url_for('about')}}">
+                        Lire plus
+                    </a>
+                </div>
+                <div class="about__img">
+                    <img src="{{ url_for('static', filename='default.jpeg')}}" alt="Sauvons les animaux">
+                </div>
+            </div>
+
+
+            <div class="products bg-light pt-3">
+                <h2 class="">
+                   ANIMAUX EN VEDETTE
+                </h2>
+
+                <hr class="line">
+
+                <div class="products__list">
+
+                    <div class="row">
+                        {% for animal in animaux %}
+
+                            <div class="col-sm-12 col-md-4 mt-3 mx-auto">
+                                <div class="card">
+                                    <div class="card-header ">Nom: <span>{{ animal[1] }}</span></div>
+                                  <div class="card-body">
+                                    <p class="card-text">Espèce: <span>{{ animal[2] }}</span> <br>
+                                        Age: <span>{{ animal[4] }} an{% if animal[4] > 1 %}s{% endif %}</span> <br>
+                                        Description: <span>{{ animal[5] }}  </span>
+                                    </p>
+                                    <a href="{{ url_for('animal', animal_id=animal[0]) }}"
+                                    class="btn btn-primary">Voir</a> <br>
+
+                                    <a href="mailto:{{ animal[6] }}"
+                                    class="btn btn-warning mt-2">Adopter</a>
+                                  </div>
+                                </div>
+                              </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+                <a class="btn btn-primary" href="/offers">
+                    Tout voir
+                </a>
+            </div>
+
+
+            <div class="advices">
+                <h2>
+                    <br>FAIRE UN DON 🖤
+                </h2>
+
+                <hr class="line">
+
+                <div class="advices__list">
+                    <div class="advices__list__img ">
+                        <img  class="mt-3" src="{{ url_for('static', filename='don.jpg')}}" alt="Sauvons les animaux">
+                    </div>
+
+                    <div class="advices__list__text">
+                        <h3 class="mt-4">
+                            BEAUCOUP D’ABAN<strong>DONS</strong>
+                        </h3>
+
+                        <p> La compagnie des animaux est un organisme sans but lucratif qui est géré par une équipe de 20 merveilleuses bénévoles.
+                            Notre organisme a des objectifs de croissance pour soutenir la cause animale à travers la province de Québec.
+                            Petit ou grand, chaque don est précieux et fait une grande différence pour chaque animal abandonné.Vos dons serviront entre autres aux actions suivantes: <br>
+
+                            <ul>
+                                <li>Organisation d'événements de sensibilisation pour éduquer sur la responsabilité envers les animaux et l'importance de l'adoption, notamment dans les écoles et les communautés locales.</li>
+                                <li>Développement de programmes de soins et de réhabilitation destinés aux animaux blessés ou maltraités, leur offrant ainsi une chance de guérison et de retrouver leur joie de vivre.</li>
+                                <li>Mise en place d'un réseau de familles d'accueil aimantes, qui prennent temporairement soin
+                                     des animaux en attente d'adoption.</li>
+                            </ul>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="customers">
+               <div class="row text-center bg-light pb-3">
+                <div class="col-12">
+                    <h2 class="mt-4">
+                        TEMOIGNAGES 🖤
+                      </h2>
+                </div>
+                    <div class="col-12 text-center mx-auto ">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active text-center">
+                                <div class="card  customer text-center mx-auto">
+
+                                    <div class="card-body">
+                                    <img src="{{ url_for('static', filename='custumer1.jpeg')}}" alt="Sauvons les animaux">
+                                    <p class="mt-3">Vous m'avez rendue
+                                        ma joie de vivre.  <br>
+                                    <span>Michelle</span>
+                                </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card  customer text-center mx-auto">
+
+                                    <div class="card-body">
+                                    <img src="{{ url_for('static', filename='custumer2.jpg')}}" alt="Sauvons les animaux">
+                                    <p class="mt-3">Je ne vous remercierai jamais assez pour ce bonheur <br>
+                                    <span>Ruth</span>
+                                </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card  customer text-center mx-auto">
+
+                                    <div class="card-body">
+                                    <img src="{{ url_for('static', filename='custumer3.jpg')}}" alt="Sauvons les animaux">
+                                    <p class="mt-3">Merci beaucoup, je me sens beaucoup plus heureuse <br>
+                                    <span>Anne</span>
+                                </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédent</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivant</span>
+                            </a>
+                        </div>
+                    </div>
+               </div>
+            </div>
+
+            <div class="contact" id="contact">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mx-auto">
+                            CONTACT
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-7 card mx-auto text-center">
+                        <h3 class="mt-3">
+                            Formulaire de contact
+                        </h3>
+                        <form class="form " method=' POST' action='./api/api.php?action=contact'>
+                           <div class="row mt-3">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputAddress">Nom: </label> <span class="red">*</span>
+                                        <input type="Email" class="form-control" id="inputAddress" placeholder="Email"
+                                            name='email' required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputAddress">Email: </label> <span class="red">*</span>
+                                        <input type="Email" class="form-control" id="inputAddress" placeholder="Email"
+                                            name='email' required>
+                                    </div>
+                                </div>
+                           </div>
+
+                           <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Message: <span class="red">*</span> </label>
+                                        <textarea class="form-control" placeholder="Message" id="exampleFormControlTextarea1"
+                                            rows="3 "></textarea>
+                                    </div>
+                                </div>
+                           </div>
+
+                            <div class="row mt-3">
+                                <div class="col class">
+                                    <button type="submit" class="btn btn-success mb-2">Envoyer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-12 col-md-3 mx-auto text-center">
+                        <div class="contact__content__infos card mx-auto ">
+                            <h3 class="pt-2">
+                                Réseaux sociaux
+                            </h3> <br>
+                            <p class="text text-black">
+                                N'hésitez pas à nous suivre sur les réseaux sociaux
+                            </p> <br>
+
+                            <ul>
+                                <li><a href=""><i class="fab fa-facebook"></i>
+                                    La compagnie des animaux </a></li> <br>
+                                <li>
+                                    <a href=""><i class="fab fa-instagram"></i>
+                                        La compagnie des animaux</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    {% endblock %}
+
+
+
+</div>
+
+
+
+
+
+
+

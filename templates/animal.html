@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+
+
+<title>{{ animal['nom'] }} - Animaux en adoption</title>
+
+
+<div class="content">
+    {% include 'header.html' %}
+
+    {% block body %}
+
+       <main class="main">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text text-center">
+                        INFORMATIONS SUR L'ANIMAL
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-7 mx-auto card bg-light mb-3" >
+                        <div class="card-header ">Nom: <span>{{ animal[1] }}</span></div>
+                        <div class="card-body">
+
+                        <p class="card-text">Espèce: <span>{{ animal[2] }}</span> <br>
+                            Age: <span>{{ animal[4] }} an{% if animal[4] > 1 %}s{% endif %}</span> <br>
+                            Race: <span> {{ animal[3] }} </span> <br>
+                            Ville: <span> {{ animal[8] }} </span> <br>
+                            Description: <span>{{ animal[5] }}  </span> <br>
+                        </p>
+
+                        <a class="btn btn-primary" href="mailto:{{ animal[6] }}">Contacter le propriétaire</a> <br>
+                        <p class="text text-center"><a href="{{ url_for('index') }}">Retour à l'accueil</a></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mx-auto">
+                    <card class="card">
+                        <div class="card-header">
+                            <h2>
+                                Autres animaux
+                            </h2>
+                        </div>
+
+                        <div class="card-body">
+                            <ul>
+                                {% for animal in animaux %}
+                                <li><a href="{{ url_for('animal', animal_id=animal[0]) }}"
+                                    class="text text-center"> {{ animal[1] }} </a> </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </card>
+                </div>
+            </div>
+       </main>
+
+    {% endblock %}
+</div>
+
+
+
+
+

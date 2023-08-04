@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+$primary: #2B7FBB;
+$secondary:  #20000B;
+$tertiary: #23395B;
+$white: white;
+$black: black;
+
+html, body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+h1, h2{
+    color: $primary;
+    font-weight: bold;
+}
+
+p{
+    margin: auto;
+}
+
+span, strong{
+    color: $primary;
+    font-weight: bolder;
+}
+
+.red{
+    color: red;
+    font-weight: bold;
+}
+
+.btn{
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: $primary;
+    border: 1px solid $primary;
+}
+
+.links{
+    width: max-content;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.link{
+    width: auto;
+    min-width: 120px;
+    border-radius: 5px;
+    margin: 8px;
+    cursor: pointer;
+    height: 50px;
+    background-color: $primary;
+    color: $white;
+    border: 1px solid $primary;
+    text-decoration: none;
+    padding: 5px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.link:hover{
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $primary;
+    font-weight: bold;
+}
+
+
+.btn:hover{
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+}
+
+.line{
+    color: $primary;
+    width: 30%;
+    margin: auto;
+    font-weight: bold;
+}
+
+strong{
+    color: $primary;
+    font-weight: bold;
+}
+img{
+    border-radius: 5px;
+}
+
+.content{
+
+
+    .header{
+        width: 100%;
+        top: 0;
+    }
+
+    .main{
+
+        .section{
+            .hero{
+                height: 85vh;
+                display: block;
+                margin: 0 auto;
+                background-image: linear-gradient(to bottom,
+                 rgba(99, 109, 63, 0.52), rgba(45, 35, 46, 0.73)),
+                  url('/static/hero.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding-top: 90px;
+                text-align: center;
+                color: $white;
+
+                &__title{
+                    font-weight: bold;
+                    color: $white;
+                    font-size: 3em;
+                }
+
+                &__text{
+                    margin: 50px auto;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+            }
+
+            .about{
+                margin: 20px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                text-align: center;
+
+
+                &__text{
+                    display: block;
+                    flex: 1;
+                    width: 100%;
+                    margin: auto;
+
+                    h2{
+                        margin: 15px auto;
+                        text-align: center;
+                    }
+
+                    p{
+                        width: 80%;
+                        margin: auto auto 15px auto;
+                        text-align: justify;
+                    }
+
+                    .link{
+                        margin: 20px auto;
+                    }
+                }
+
+                &__img{
+                    flex: 1;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+
+            }
+
+            .reason{
+                text-align: center;
+                width: 90%;
+                margin:30px auto;
+
+
+            }
+
+            .products{
+                text-align: center;
+                margin: 30px auto;
+
+                p{
+                    width: 90%;
+                    margin: 15px auto;
+                }
+
+                &__list{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 10px auto;
+                    width: 80%;
+
+                    .item{
+                        display: block;
+
+                        img{
+                            width: 150px;
+                        }
+                    }
+                }
+
+                .item{
+                    &__number{
+                        width: 60px;
+                        height: 60px;
+                        background-color: $secondary;
+                        border-radius: 30px;
+                        border: 5px solid $white;
+                        margin: auto;
+                        display: table;
+                        text-align: center;
+
+                        h5{
+                            color: $white;
+                            font-weight: bold;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+                    }
+
+                    &__title{
+                        color: $white;
+                    }
+                }
+
+                .table-responsive{
+                    width: 90%;
+                    margin: 30px auto;
+
+                    table{
+                        border: 1px solid black;
+                        thead{
+                            background-color: $primary;
+                            color: $black;
+                        }
+
+                        tbody{
+                            padding: 10px;
+                             td{
+                                border: 1px solid $black;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .advices{
+               display: block;
+                margin: 10px auto;
+                text-align: center;
+
+               &__list{
+                    justify-content: space-between;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 5px auto;
+                    width: 95%;
+                    margin: auto;
+
+                    &__img{
+                        flex: 1;
+                        text-align: center;
+                        img{
+                            width: 90%;
+                            min-width: 330px;
+                            margin: 30px auto;
+                        }
+                    }
+
+                    &__text{
+                        flex: 1;
+                        text-align: justify;
+
+                    }
+               }
+
+
+            }
+
+            .customers{
+               .customer{
+                   width: 80%;
+                   min-width: 340px;
+                   margin: auto;
+
+                   img{
+                       width: 60%;
+                       min-width: 330px;
+                   }
+               }
+            }
+
+            .offers{
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .contact{
+                display: block;
+                text-align: center;
+
+                p{
+                    width: 90%;
+                    text-align: justify;
+                    margin: 20px auto;
+                }
+
+                &__form{
+                    width: 80%;
+                    margin: 30px auto;
+
+                    form{
+                        border: 1px solid black;
+                        padding: 5px;
+                        width: 500px;
+                        margin: auto;
+
+                        .form-group{
+                            margin: 10px auto;
+
+                            input{
+                                height: 30px;
+                            }
+
+                            textarea{
+                                height: 150px;
+                                width: 90%;
+                            }
+                        }
+
+                        .form-group{
+
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
+
+/*responsive for 1024px*/
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        .content{
+
+            .header{
+                margin: 0;
+                .navbar{
+                    &__item{
+                        background-color: $secondary;
+                        border-radius: 5px;
+                        width: 70%;
+                        z-index: 99999;
+                        display: none;
+                        ul{
+                            li{
+                                display: block;
+                                margin: 15px auto;
+
+                                a{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                    &__icon{
+                        display: block;
+                    }
+                }
+            }
+
+            .main{
+                .section{
+                    padding-top: 0px;
+
+                    .hero{
+                        margin: 0 auto;
+                        height: 35vh;
+
+                        p{
+                            margin: 40px auto;
+                        }
+
+                        .btn{
+                            margin: 40px auto;
+                        }
+                    }
+
+                    .about{
+                        flex-direction: column;
+
+                        &__img{
+                            margin: 20px auto;
+                        }
+                    }
+
+                    .products{
+                        width: 100%;
+
+                        &__list{
+                            width: 95%;
+                        }
+                    }
+
+                    .advices{
+                            &__list{
+                                flex-direction: column;
+
+                                img{
+                                    width: 550px;
+                                    height: 450px;
+                                }
+                            }
+                    }
+
+                    .customers{
+                        .customer{
+                            width: 90%;
+                            margin: auto;
+                            img{
+                                width: 330pxpx;
+                                margin: auto;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+   }
+
+
+/*responsive for 350pxpx*/
+@media screen and (min-width: 350px) and (max-width: 767px){
+    .content{
+
+        .header{
+            margin: 0;
+            .navbar{
+                &__item{
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    width: 70%;
+                    z-index: 99999;
+                    display: none;
+                    ul{
+                        li{
+                            display: block;
+                            margin: 15px auto;
+
+                            a{
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                &__icon{
+                    display: block;
+                }
+            }
+        }
+
+        .main{
+            .section{
+                padding-top: 0px;
+
+                .hero{
+                    margin: 0 auto;
+                    height: 40vh;
+
+                    h1{
+                        font-size: 1.9em;
+                    }
+
+                    p{
+                        margin: 30px auto;
+                    }
+
+                    .link{
+                        margin: 30px auto;
+                    }
+                }
+
+                .about{
+                    flex-direction: column;
+
+                    p{
+                        width: 90%;
+                    }
+
+                    &__img{
+                        margin: 20px auto;
+                    }
+                }
+
+                .products{
+                    width: 100%;
+
+                    &__list{
+                        width: 95%;
+                        flex-direction: column;
+                    }
+                }
+
+                .advices{
+                        &__list{
+                            flex-direction: column;
+
+                            &__img{
+                                text-align: center;
+
+                                img{
+                                    width: 330px;
+                                    height: 330px;
+                                }
+                            }
+
+                            &__text{
+                                width: 90%;
+                                margin: auto
+                            }
+                        }
+                }
+
+                .customers{
+                    flex-direction: column;
+
+                    .customer{
+                        width: 100%;
+                        margin: auto;
+                        text-align: center;
+
+                        img{
+                            width: 330px;
+
+                        }
+                    }
+                }
+
+                .contact{
+                    &__form{
+                        width: 100%;
+                        form{
+                            width: 300px;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer{
+            bottom: 0;
+            margin: 40px auto 0 auto;
+            flex-direction: column;
+        }
+    }
+}

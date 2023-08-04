@@ -1,0 +1,35 @@
+<footer class="footer mt-5">
+    <div class="footer__item">
+        <a href="{{ url_for('index')}}">
+            <img src="static/image/logo.jpg"alt="Adoptez un animal" width="100px">
+        </a>
+        <p>
+            La Compagnie des Animaux 🤍
+        </p>
+    </div>
+
+    <div class="footer__item">
+        <h4>Actions</h4>
+        <ul>
+            <li><a href="{{ url_for('animals')}}">Adoptez un animal</a></li>
+            <li><a href="{{ url_for('submit')}}">Faire adopter un animal</a> </li>
+        </ul>
+    </div>
+
+    <div class="footer__item">
+        <h4>Liens</h4>
+        <ul>
+
+            <li><a href="{{ url_for('index')}}">Accueil</a></li>
+            <li><a href="{{ url_for('about')}}">A propos</a></li>
+            <li><a href="/index#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div>
+
+        <p>&copy; 2023 La Compagnie des Animaux. Tous droits réservés.</p>
+
+    </div>
+
+</footer>
